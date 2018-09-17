@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block head_title %}Welcome | {{ block.super }} {% endblock %}
+
+<style >
+  {% block style%}
+
+  {% endblock %}
+</style>
+
+{% block jumbotron %}
+<div class="jumbotron">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>RAVI-IT Services</h1>
+      <p class="lead">Our vision clearly identifies what we aspire to become – while our core values are the priorities we set for our business and day-to-day activities.</p>
+      <a class="btn btn-lg btn-primary" href="" role="button">Join Us &raquo;</a>
+    </div>
+    <div class="col-sm-6" style="background-color:black; height:300px;">
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+  <div class="col-md-4">
+    <p class="lead text-align-center">NETWOKING SERVICES AND NETWOK SECUIRITY </p>
+  </div>
+  <div class="col-md-4">
+    <p class="lead text-align-center">SOFTWARE DEVELOPEMENT :<br> WEB APPLICATIONS AND<br> DESKTOP APPLICATIONS</p>
+  </div>
+
+  <div class="col-md-4">
+      <!-- <h1>{{user_logedin}}</h1> -->
+      <!-- <h1>user_email: {{user_email}}</h1> -->
+      <p class="lead text-align-center">{{title}}</p>
+      <form  action="" method="POST">{%csrf_token%}
+        {{form|crispy}}
+        <input class="btn btn-primary" type="submit" value="Sign Up">
+      </form>
+  </div>
+
+
+</div>
+{% endblock %}

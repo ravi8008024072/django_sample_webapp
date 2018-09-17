@@ -1,0 +1,31 @@
+{% load staticfiles %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+    <title>{% block head_title %} RAVI-IT {% endblock %} </title>
+  {% include 'head_css.html' %}
+    <style >
+      {% block style%}
+      {% endblock %}
+    </style>
+
+  </head>
+
+  <body>
+    {% include 'navbar.html' %}
+    <main role="main" class="container">
+      {% block jumbotron %}
+      
+      {% endblock %}
+
+      {% block content %}
+      {% endblock %}
+    </main>
+    {% include 'javascript.html' %}
+  </body>
+</html>
